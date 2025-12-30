@@ -1,15 +1,57 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
 import "./globals.css";
+import SideBar from "@/components/sidebar";
+import localFont from "next/font/local";
+import PlayBar from "@/components/playbar";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
+const font = localFont({
+  src: [
+    {
+      path: "../public/fonts/black.otf",
+      weight: "900",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/heavy.otf",
+      weight: "800",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/bold.otf",
+      weight: "700",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/semibold.otf",
+      weight: "600",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/medium.otf",
+      weight: "500",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/regular.otf",
+      weight: "400",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/light.otf",
+      weight: "300",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/thin.otf",
+      weight: "200",
+      style: "normal",
+    },
+    {
+      path: "../public/fonts/ultralight.otf",
+      weight: "100",
+      style: "normal",
+    },
+  ],
 });
 
 export const metadata: Metadata = {
@@ -23,10 +65,10 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-      >
+    <html lang="en" className="dark">
+      <body className={`${font.className} flex antialiased`}>
+        <SideBar />
+        <PlayBar />
         {children}
       </body>
     </html>
