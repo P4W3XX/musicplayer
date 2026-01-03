@@ -12,12 +12,19 @@ export default function PlayBar() {
           alt="Playbar Placeholder"
           width={60}
           height={60}
-          className=" rounded-sm"
+          className=" rounded-sm border-2 mix-blend-luminosity"
           priority
         />
         <div className=" flex flex-col">
-          <h1 className=" font-semibold text-lg leading-7">Stargazing</h1>
-          <p className=" text-[#fa586a] ">Travis Scott</p>
+          <div className=" flex items-center justify-center space-x-2">
+            <h1 className=" font-semibold text-lg leading-7">Stargazing</h1>
+            <div className=" size-4 bg-neutral-400 rounded-[3px] flex items-center justify-center">
+              <span className=" text-xs text-background font-bold">E</span>
+            </div>
+          </div>
+          <p className=" text-[#fa586a] font-semibold leading-4">
+            Travis Scott
+          </p>
         </div>
       </div>
       <div className=" flex flex-col items-center justify-center space-y-2 mb-2">
