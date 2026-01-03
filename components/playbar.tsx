@@ -7,14 +7,24 @@ export default function PlayBar() {
   return (
     <div className=" fixed bottom-0 flex justify-between items-center px-3 w-full min-h-23 bg-(--playbarBG) border-t border-(--labelDivider)">
       <div className=" flex items-center space-x-3">
-        <Image
-          src="/placeholder.png"
-          alt="Playbar Placeholder"
-          width={60}
-          height={60}
-          className=" rounded-sm border-2 mix-blend-luminosity"
-          priority
-        />
+        <div className=" relative rounded-sm h-16 aspect-square overflow-hidden">
+          <Image
+            src="/album-cover.jpg"
+            alt="Album Cover"
+            width={64}
+            height={64}
+            className=" absolute rounded-sm top-0 scale-99 z-10 size-16"
+          />
+          <div className=" absolute inset-0 bg-white/50 z-5 " />
+          <Image
+            src="/album-cover.jpg"
+            alt="Album Cover"
+            width={64}
+            height={64}
+            quality={100}
+            className=" relative size-16 "
+          />
+        </div>
         <div className=" flex flex-col">
           <div className=" flex items-center justify-center space-x-2">
             <h1 className=" font-semibold text-lg leading-7">Stargazing</h1>
