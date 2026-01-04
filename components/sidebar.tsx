@@ -37,7 +37,7 @@ export default function SideBar() {
             <item.icon color="#fa586a" className=" size-5" />
             <span
               className={` text-[hsla(0,0%,100%,.92)] ${
-                pathname === item.href ? "font-semibold" : "font-medium"
+                pathname === item.href ? "font-medium" : "font-normal"
               }`}
             >
               {item.title}

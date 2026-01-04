@@ -1,6 +1,15 @@
 import { Button } from "@/components/ui/button";
 import { Play } from "lucide-react";
 import Image from "next/image";
+import AlbumInfo from "@/components/albumInfo";
+import {
+  DropdownMenu,
+  DropdownMenuContent,
+  DropdownMenuItem,
+  DropdownMenuLabel,
+  DropdownMenuSeparator,
+  DropdownMenuTrigger,
+} from "@/components/ui/dropdown-menu"
 
 export default function AlbumPage() {
   return (
@@ -32,12 +41,13 @@ export default function AlbumPage() {
               </div>
             </div>
             <p className=" text-2xl text-[#fa586a]">Travis Scott</p>
-            <div className=" flex space-x-2 text-sm font-bold text-neutral-600">
-              <p>HIP-HOP I RAP</p>
+            <div className=" flex space-x-2 text-sm font-bold text-neutral-400">
+              <p>HIP-HOP/RAP</p>
               <p>•</p>
               <p>2018</p>
             </div>
           </div>
+          <AlbumInfo />
           <Button className=" mt-6 px-10! py-3 text-white  justify-start hover:bg-[#D60017]/70 w-min font-semibold bg-[#D60017]">
             <Play className=" size-4" fill="currentColor" />
             PLAY
